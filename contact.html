@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Elegance Beauty Parlour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        .contact-info {
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            color: var(--primary-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .info-content h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .contact-form {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            font-family: inherit;
+            outline: none;
+            transition: var(--transition);
+        }
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(255, 107, 158, 0.2);
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        @media(max-width: 800px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo"><i class="fas fa-crown"></i> Elegance</a>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+            <button class="nav-btn">Book Now</button>
+        </div>
+        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+    
+    <header class="page-header" style="background-image: linear-gradient(135deg, rgba(201, 61, 114, 0.9), rgba(255, 107, 158, 0.8)), url('https://images.unsplash.com/photo-1516975080661-46bfa2c10b25?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')">
+        <h1>Get In Touch</h1>
+        <p>Book an appointment or send us your queries.</p>
+    </header>
+
+    <section class="content-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2 style="font-family: var(--font-heading); margin-bottom: 2rem; color: var(--primary-dark);">Contact Details</h2>
+                
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="info-content">
+                        <h4>Our Location</h4>
+                        <p style="color: var(--text-light);">123 Beauty Lane, Rose District<br>New York, NY 10001</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="info-content">
+                        <h4>Phone Number</h4>
+                        <p style="color: var(--text-light);">+1 (555) 123-4567<br>Mon-Sat: 9am - 8pm</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="info-content">
+                        <h4>Email Address</h4>
+                        <p style="color: var(--text-light);">hello@eleganceparlour.com<br>Support: 24/7 online booking</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2 style="font-family: var(--font-heading); margin-bottom: 2rem; color: var(--primary-dark);">Send us a Message</h2>
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="jane@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Interested Service</label>
+                        <select id="service" class="form-control">
+                            <option value="hair">Hair & Styling</option>
+                            <option value="makeup">Glamour Makeup</option>
+                            <option value="spa">Spa & Massage</option>
+                            <option value="facial">Facial Treatment</option>
+                            <option value="other">Other / Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message / Date Preference</label>
+                        <textarea id="message" class="form-control" placeholder="I would like to book an appointment for next Friday..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <h3 class="logo"><i class="fas fa-crown"></i> Elegance</h3>
+                <p>Your sanctuary for beauty and relaxation. We bring out the best in you.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="services.html">Our Services</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Beauty Lane, Rose District</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> hello@eleganceparlour.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Elegance Beauty Parlour. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
